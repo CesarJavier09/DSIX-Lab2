@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Lectura de números
+        var num1 = prompt("Ingrese un número: ")
+        var num2 = prompt("Ingrese otro número: ")
+
+        var mayor = calcMayor(num1, num2) // Calculando el mayor
+        alert("El número mayor es: " + mayor) //Indicando el número mayor
+        // Mayor es positivo <=> mayor > 0
+        mayor >= 0 ? alert("El número mayor es positivo") : alert("El número mayor es negativo")
+
+        var op = compararNum(num1, num2) //calculando relación si num1++
+        alert("El primer número incrementado en 1 es " + op + " que el numero 2") //Indicando la relación
+        // num2 es positivo <=> num2 > 0
+        num2 >= 0 ? alert("El segundo número es positivo") : alert("El segundo número es negativo") 
+
+        function calcMayor(num1, num2) {
+            /*
+            * Se realiza la conversión de los números leidos
+            * De omitirse la conversión esta comparación producirá resultados erroneos
+            * -100 > 1 => True
+            */ 
+            if (parseFloat(num1) > parseFloat(num2)) {
+                return num1
+            } else {
+                return num2
+            }
+        }
+
+        function compararNum(num1, num2) {
+            /*
+            *Se realiza la conversión de valores leidos en un paso adicional
+            *La conversión se realiza para evitar errores lógicos
+            */
+            num1 = parseFloat(num1)
+            num1++ // Incrementando el primer valor en 1 unidad
+            num2 = parseFloat(num2)
+
+            if (num1 > num2) { 
+                return "mayor"
+            } else if (num1 < num2) {
+                return "menor"
+            } else { // mayor ↓ menor => igual
+                return "igual"
+            }
+        }
+        
+    </script>
+</body>
+</html>

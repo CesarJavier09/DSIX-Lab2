@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //Inicialización de variable
+        var suma = 0
+
+        //Hacer mientras el usuario no oprima cancelar
+        do {
+            var num = prompt("Ingrese un número: ")
+            console.log(num);
+            /*
+            * Si el usuario oprime enter sin ingresar un número el valor leido será NaN => causará error en la línea 23
+            * Si el usuario oprime cancelar el valor será NULL
+             */
+            if (num != null && !isNaN(parseInt(num))) { 
+                    suma += parseInt(num)
+            }
+        } while (num!=null); // Si se oprime cancelar => num = NULL
+
+        alert("La suma de los números ingresados es: " + suma)
+    </script>
+</body>
+</html>

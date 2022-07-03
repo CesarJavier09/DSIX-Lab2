@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloques de construccion</title>
+</head>
+<body>
+    <script>
+        do {
+            var bloques = prompt("Ingrese el número de bloques: ")
+            if (bloques < 1)
+            alert("El número minimo de bloques permitidos es 1\nIntente de nuevo!")
+        } while (bloques<1);
+       
+        var altura = 0 
+        var capa = 1 //Capa inicial siempre lleva 1 bloque
+
+        //si bloque > 1 => iteramos el resto de bloques para determinar la altura
+        while (capa <= bloques) {
+            altura += 1 //Ya que si bloques > 0 la altura minima es 1 =>  
+            bloques -= capa       //capa = cantidad de bloques => boques = bloques - capa
+            capa += 1 // Ubicandose en la siguiente capa
+            console.log("La altura hasta de la piramide hasta ahora es: " + altura + "\nBloques restantes: " + bloques);
+        }
+        alert("La altura de la piramide es: " + altura)
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Año bisiesto</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var annio = parseInt(prompt("Ingrese el número de año a evaluar: "))
+        anioBisiesto(annio)
+
+        function anioBisiesto(annio) {
+            if (annio >= 1582) {
+                if (annio % 400 != 0 && annio % 100 == 0) {
+                    alert(annio + " es un año común.")
+                } else if ( annio % 4 == 0 ) alert(annio + " es un año bisiesto.")
+            } else {
+                alert("Año no corresponde a la era Gregoriana.")
+            }
+        }
+    </script>
+</body>
+</html>

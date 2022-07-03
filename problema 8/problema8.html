@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números pares</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // Leyendo un número entero para evaluar
+        var numero = parseInt(prompt("Ingrese un numero entero: "))
+        alert("El número ingresado (" + numero + ") es un número " + esPar(numero)) // Salida de mensaje con evaluación
+
+        function esPar(num) {
+
+            return num%2==0 ?  "par" :  "impar" // Retorna num % 2 = 0 => par => impar
+                
+        }
+    </script>
+</body>
+</html>
